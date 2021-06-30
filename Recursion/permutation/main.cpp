@@ -9,7 +9,7 @@ using namespace std;
 #define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 vector<int> permutation;
-const int n=3;
+const int n=4;
 bool chosen[n+1];
 
 void search() {
