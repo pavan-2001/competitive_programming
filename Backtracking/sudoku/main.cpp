@@ -25,8 +25,8 @@ bool isSafe(int matrix[9][9], int row , int col, int num) {
     }
     // 
 
-    for(int i=3*((int)(row/3)) ; i<(((int)(row/3))+3); i++) {
-        for(int j=3*((int)(col/3)); j<(((int) (col/3))+3); j++) {
+    for(int i=3*((int)(row/3)) ; i<((3*(int)(row/3))+3); i++) {
+        for(int j=3*((int)(col/3)); j<(3*((int) (col/3))+3); j++) {
             if(matrix[i][j] == num)
             return false;
         }
