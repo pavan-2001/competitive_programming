@@ -1,5 +1,5 @@
 /*
-    Recursive Approach ( Top to Bottom ) 
+    DynamicProgramming Approach ( Top to Bottom ) - (Memoization)
     Time Complexity : O(N.K) {N : sum to be made, K : number of denominations}
     we call solve function with an argument n;
     for which it calculates the minimum number of coins required to form that sum.
@@ -9,6 +9,10 @@
                 { n < 0  , INFINITY
     solve(n) =  { n == 0 , 0
                 { n > 0 , solve(n-c)+1, c belongs to coins
+    At every call it check whether the value of x is calculated or not .
+    if not then it calculates the value of x and stores in the value array and updates ready of x to true.
+    else if it's calculated justs return the value.
+    this save time from making recursive calls for the same value again and again by storing the result once and  using it for further computations.
 */
 
 
