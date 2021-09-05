@@ -39,6 +39,10 @@ int CountingNumberOfPaths(int &start, int &end, int &n, vector<int> adj[], vecto
         }
     }
 
+    for(auto i : paths)
+    cout<<i<<' ';
+    cout<<endl;
+
     return paths[end];
 }
 
@@ -50,7 +54,7 @@ int main() {
     cout << "\033[2J\033[1;1H";
 
     // number of nodes 
-    int n = 6;
+    int n = 7;
     
     // stores the number of paths
     vector<int> paths(n, 0);
@@ -59,10 +63,10 @@ int main() {
     int start = 0;
 
     // destination node
-    int end = 5;
+    int end = 6;
 
     // adjecency list 
-    vector<int> adj[n] = {{1, 3}, {2, 5}, {5}, {4}, {1}, {}};
+    vector<int> adj[n] = {{1, 2}, {2, 3}, {3}, {4, 5}, {6}, {6}, {}};
 
     auto NumberOfPaths = CountingNumberOfPaths(start, end, n, adj, paths);
 
@@ -71,5 +75,7 @@ int main() {
     return 0;
 }
 
-// Time Complexity : O(V.E).
+// Time Complexity : O(V + E).
 // Space Complexity : O(V).
+// Depth First Search for Topological sort.
+// Breadth First Search for Shortest Path.
